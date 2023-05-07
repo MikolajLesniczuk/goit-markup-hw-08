@@ -1,20 +1,36 @@
 
 .images{
     padding-bottom: 94px;
+   
 
 &-list {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     gap:30px;
+    @include tablet {
+        flex-basis: calc((100% - 1 * 30px) / 2);
+        gap: 28px;
+     }
+
+
     }
+
 }
 
 .images-grid {
-    flex-basis: calc((100% - 2 * 30px) / 3);
+    // flex-basis: calc((100% - 2 * 30px) / 3);
     max-width: 370px;
     cursor: pointer;
     max-height: 404px;
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        // flex-basis: calc((100% - 1 * 30px) / 2);
+column-gap: 20px;
+    }
 
     &__label{
   
